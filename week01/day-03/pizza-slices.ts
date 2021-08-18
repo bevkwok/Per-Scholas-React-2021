@@ -6,75 +6,6 @@
 ​
 */
 
-const pizzaSide = "|";
-const pizzaTopping = "."
-
-function buildPizzaTop(length: number = 1) {
-    let pizzaTop = " -";
-    for(let i = 1; i < length; i++){
-        pizzaTop += "-";
-    }
-    return pizzaTop;
-}
-// console.log(buildPizzaTop(1));
-
-function buildPizzaBody(width: number = 1) {
-    let pizzaBody = pizzaSide + " "; // |.
-
-    for(let i = 1; i < width; i++){
-        pizzaBody += pizzaTopping;
-    }
-
-    return pizzaBody + pizzaSide; 
-}
-// console.log(buildPizzaBody(2));
-
-function buildPizzaBottom(length: number = 1) {
-    let pizzaBottom = "|_"
-    for(let i = 1; i < length; i++){
-        pizzaBottom += "_";
-    }
-    return pizzaBottom + pizzaSide;
-}
-
-// console.log(buildPizzaBottom(1));
-
-
-
-
-
-
-function drawSmallPizzaSlice() {
-    return(buildPizzaTop() + "\n" + buildPizzaBottom());
-}
-​
-/**
- * Draw a length 1 width 2 pizza slice 
- * Medium - Length 1 width 2:
-
- --
-|__|
-* 
-*/
-​
-function drawMediumPizzaSlice() {
-    return(buildPizzaTop(2) + "\n" + buildPizzaBottom(2));
-}
-/**
- * 
- * Draws a length 2 width 2 pizza slice 
- * @returns {string}
- * Length 2 width 2:
-
- --
-| .|
-|__|
-​
-*/
-function drawLargePizzaSlice() {
-    return(buildPizzaTop(2) + "\n" + buildPizzaBody(2) + "\n" + buildPizzaBottom(2));
-}
-​
 /**
  * @param {string} sliceSize
  *                 size of slice
@@ -101,6 +32,49 @@ function drawLargePizzaSlice() {
 |__|
 ​
 */
+
+const pizzaSide: string = "|";
+const pizzaTopping: string = "."
+
+function buildPizzaTop(width: number = 1): string {
+    let pizzaTop = " -";
+    for(let i = 1; i < width; i++){
+        pizzaTop += "-";
+    }
+    return pizzaTop;
+}
+
+function buildPizzaBody(width: number = 1): string {
+    let pizzaBody = pizzaSide + " "; // |.
+
+    for(let i = 1; i < width; i++){
+        pizzaBody += pizzaTopping;
+    }
+
+    return pizzaBody + pizzaSide; 
+}
+
+function buildPizzaBottom(width: number = 1): string {
+    let pizzaBottom = "|_"
+    for(let i = 1; i < width; i++){
+        pizzaBottom += "_";
+    }
+    return pizzaBottom + pizzaSide;
+}
+
+function drawSmallPizzaSlice() {
+    return(buildPizzaTop() + "\n" + buildPizzaBottom());
+}
+​
+function drawMediumPizzaSlice() {
+    return(buildPizzaTop(2) + "\n" + buildPizzaBottom(2));
+}
+
+function drawLargePizzaSlice() {
+    return(buildPizzaTop(2) + "\n" + buildPizzaBody(2) + "\n" + buildPizzaBottom(2));
+}
+​
+
 function drawAnyPizzaSlice(length: number, width: number) {
     if(length === 1 && width === 1) {
         return drawSmallPizzaSlice();
