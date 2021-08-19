@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>h1</h1>
+    <p>p</p>
+    <form id="buildForm" name="buildForm" action="">
+        <input type="text" id="height" name="height" placeholder="height" onChange="showHeight(event)">
+        <input type="text" id="width" name="width" placeholder="width" onChange="showWidth(event)">
+        <input type="text" id="x" name="x" placeholder="x-position" onChange="showHeight(event)">
+        <input type="text" id="y" name="y" placeholder="y-position" onChange="showWidth(event)">
+        <input type="submit" value="Submit" onclick="draw()">
+    </form>
+    <canvas height="1000" width="1000" id="my-canvas"></canvas>
+    <script src="index.js"></script>
+</body>
+</html>
