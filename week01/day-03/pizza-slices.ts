@@ -37,7 +37,10 @@ const pizzaSide: string = "|";
 const pizzaTopping: string = "."
 
 function buildPizzaTop(width: number = 1): string {
-    let pizzaTop = " -";
+    // default pizzaTop
+    let pizzaTop = " -"; 
+
+    // depends on the pizza width, make pizzaTop wider
     for(let i = 1; i < width; i++){
         pizzaTop += "-";
     }
@@ -45,20 +48,28 @@ function buildPizzaTop(width: number = 1): string {
 }
 
 function buildPizzaBody(width: number = 1): string {
-    let pizzaBody = pizzaSide + " "; // |.
+    // default = "| ."
+    let pizzaBody = pizzaSide + " "; 
 
-    for(let i = 1; i < width; i++){
-        pizzaBody += pizzaTopping;
+    // depends on the pizza width, add extra topping
+    for(let i = 1; i < width; i++){ 
+        pizzaBody += pizzaTopping; 
     }
 
+    // add one more pizzaSide at the end
     return pizzaBody + pizzaSide; 
 }
 
 function buildPizzaBottom(width: number = 1): string {
+    // default pizzaBottom
     let pizzaBottom = "|_"
+
+    // depends on the pizza width, make pizzaBottom wider
     for(let i = 1; i < width; i++){
         pizzaBottom += "_";
     }
+
+    // add one more pizzaSide at the end
     return pizzaBottom + pizzaSide;
 }
 

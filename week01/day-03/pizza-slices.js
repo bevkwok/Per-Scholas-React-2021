@@ -35,7 +35,9 @@ var pizzaSide = "|";
 var pizzaTopping = ".";
 function buildPizzaTop(width) {
     if (width === void 0) { width = 1; }
+    // default pizzaTop
     var pizzaTop = " -";
+    // depends on the pizza width, make pizzaTop wider
     for (var i = 1; i < width; i++) {
         pizzaTop += "-";
     }
@@ -43,18 +45,24 @@ function buildPizzaTop(width) {
 }
 function buildPizzaBody(width) {
     if (width === void 0) { width = 1; }
-    var pizzaBody = pizzaSide + " "; // |.
+    // default = "| ."
+    var pizzaBody = pizzaSide + " ";
+    // depends on the pizza width, add extra topping
     for (var i = 1; i < width; i++) {
         pizzaBody += pizzaTopping;
     }
+    // add one more pizzaSide at the end
     return pizzaBody + pizzaSide;
 }
 function buildPizzaBottom(width) {
     if (width === void 0) { width = 1; }
+    // default pizzaBottom
     var pizzaBottom = "|_";
+    // depends on the pizza width, make pizzaBottom wider
     for (var i = 1; i < width; i++) {
         pizzaBottom += "_";
     }
+    // add one more pizzaSide at the end
     return pizzaBottom + pizzaSide;
 }
 function drawSmallPizzaSlice() {
