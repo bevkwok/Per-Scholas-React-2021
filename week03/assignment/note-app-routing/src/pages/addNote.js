@@ -1,22 +1,30 @@
 import React, { useRef } from 'react'
 export default function AddNote({setNotes}) {
 
-    const noteMessageRef = useRef();
+    const noteTitleRef = useRef();
+    const noteContentRef = useRef();
+
     
     // const [notes, setNotes] = useState([]);
 
     function handleAddNote(e) {
-        const message = noteMessageRef.current.value
-        if (message === '') return 
+        const title = noteTitleRef.current.value
+        const content = noteContentRef.current.value
+
+        if (title === '' || content === '') return 
         setNotes(notes => {
-            return [...notes, { message: message }]
+            return [...notes, { title: title, content: content }]
         })
-        noteMessageRef.current.value = null
+        noteTitleRef.current.value = null
+        noteContentRef.current.value = null
+
     }
     return (
         <div>
             <h1>This is the Add Note Page</h1>
-            <input ref={noteMessageRef} type="text" />
+            <input ref={noteTitleRef} type="text" placeholder="Title"/>
+            <input ref={noteContentRef} type="text" placeholder="Content"/>
+
             <button onClick={handleAddNote}>Add Note</button>
         </div>
     )
