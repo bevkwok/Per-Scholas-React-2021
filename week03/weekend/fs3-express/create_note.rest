@@ -1,0 +1,14 @@
+# https://github.com/Huachao/vscode-restclient/blob/master/README.md#usage
+
+GET http://localhost:3001/api/notes/
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+    "content": "VS Code REST client is a great tool",
+    "important": false
+
+}
