@@ -12,7 +12,7 @@ export default function NotesList({notes}) {
                     notes.map(note => {
                         return (
                         <li>
-                            <Note message={note.message}/>
+                            <Note title={note.title} content={note.content}/>
                         </li>
                         )
                     })
