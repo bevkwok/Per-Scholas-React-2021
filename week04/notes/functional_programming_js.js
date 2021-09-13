@@ -1,0 +1,1 @@
+// https://www.toptal.com/javascript/functional-programming-javascript

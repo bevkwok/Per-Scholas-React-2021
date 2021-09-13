@@ -48,3 +48,5 @@ const countPetType = pets.reduce((acc, pet) => {
     return acc
 }, {})
 console.log(countPetType);
+
+// https://docs.google.com/document/d/e/2PACX-1vR6kW8Uz1SOXuhe07sD5DuYKmC_iR2ztbyvFhIlcuu8DZviMKFnA9HM4fgcWVOgvn7SY6ETA68s-3nh/pub

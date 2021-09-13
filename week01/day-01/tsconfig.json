@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "week01/day-01/dist", 
+    "baseUrl": ".",
+    "paths": {
+    "*": ["node_modules/*", "week01/day-01/src/types/*"]
+    }
+},
+"include": ["src/**/*"]
+}

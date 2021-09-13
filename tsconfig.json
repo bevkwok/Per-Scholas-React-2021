@@ -8,11 +8,11 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "dist", 
+    "outDir": "week01/day-01/dist", 
     "baseUrl": ".",
     "paths": {
-    "*": ["node_modules/*", "src/types/*"]
+    "*": ["node_modules/*", "week01/day-01/src/types/*"]
     }
 },
-"include": ["src/**/*"]
+"include": ["week01/day-01/src/**/*"]
 }

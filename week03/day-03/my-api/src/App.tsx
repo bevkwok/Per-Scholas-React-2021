@@ -23,6 +23,12 @@ const App = () => {
   // <> is typing the state property variable
   
   const [error, setError]: [string, (error: string) => void] = React.useState("");
+
+  const handleCancelClick = () => {
+    if (cancelTokenSource) {
+      cancelTokenSource.cancel("User cancelled operation");
+    }
+  };
   
   // making API call
   React.useEffect(() => {
@@ -40,8 +46,9 @@ const App = () => {
       setLoading(false);
     })
     .catch(ex => {
-      const error = 
-      ex.code === "ECONNABORTED"
+      const error = axios.isCancel(ex)
+      ? 'Request Cancelled'
+      : ex.code === "ECONNABORTED"
       ? "A timeout has occurred"
       : ex.response.status === 404 
       ? "Resource Not found"
@@ -49,10 +56,14 @@ const App = () => {
       setError(error);
       setLoading(false);
     });
-  }, []);
+    cancelTokenSource.cancel("User cancelled operation");
+  });
 
   return (
     <div className="App">
+      {loading && (
+        <button onClick={handleCancelClick}>Cancel</button>
+      )}
       <ul className="post">
         {posts.map((post) => (
           <li key={post.id}>

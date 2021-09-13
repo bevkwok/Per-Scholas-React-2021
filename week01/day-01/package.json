@@ -1,0 +1,34 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "my-script": "node hello.js",
+    "ts-node": "ts-node",
+    "typescript-watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevkwok/per-scholas-react-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bevkwok/per-scholas-react-2021/issues"
+  },
+  "homepage": "https://github.com/bevkwok/per-scholas-react-2021#readme",
+  "devDependencies": {
+    "@types/node": "^16.7.1",
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react-cookie": "^4.1.1",
+    "uuid": "^8.3.2"
+  }
+}
