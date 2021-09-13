@@ -1,0 +1,18 @@
+REST = Representational State Transfer
+- an architectural style for scalable web applications
+- a JSON data is like a resources in RESTful thinking
+- every resource has an associated URL = resource's unique address
+
+URL convention:
+name of resource type + resource's unique identifier
+
+if root URL = www.example.com/api
+if there is a resources called note with identifier 10
+then it's URL = www.example.com/api/notes/10
+
+GET - notes/10 = get data from note 10
+GET - notes = get data from all notes
+POST - notes = create a new resource
+DELETE - notes/10 = removes note 10 from resource
+PUT - notes/10 = edit the entire note 10 in resource
+PATCH - notes/10 = replace part of note 10 in resource

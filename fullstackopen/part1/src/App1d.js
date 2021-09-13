@@ -4,6 +4,8 @@ import Button from './Button'
 
 const App1d = () => {
 
+    
+
     // -- initial
     const [left, setLeft] = useState(0)  
     const [right, setRight] = useState(0)
