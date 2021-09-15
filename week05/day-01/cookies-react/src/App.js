@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
 
+// https://www.tutorialspoint.com/how-to-set-cookies-in-reactjs
+
 const App = () => {
   const [name, setName] = useState('');
   const [pwd, setPwd] = useState('');
